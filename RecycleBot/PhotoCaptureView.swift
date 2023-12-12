@@ -1,5 +1,5 @@
 //
-//  PhotoPickerView.swift
+//  PhotoCaptureView.swift
 //  RecycleBot
 //
 //  Created by Noah Brauner on 12/11/23.
@@ -8,7 +8,8 @@
 import SwiftUI
 import PhotosUI
 
-struct PhotoPickerView: UIViewControllerRepresentable {
+/// Sheet that allows the user to take one photo and binds that to the `selectedImage` variable
+struct PhotoCaptureView: UIViewControllerRepresentable {
     @Binding var selectedImage: UIImage?
     
     func makeUIViewController(context: Context) -> PHPickerViewController {
@@ -27,9 +28,9 @@ struct PhotoPickerView: UIViewControllerRepresentable {
     }
     
     class Coordinator: NSObject, PHPickerViewControllerDelegate {
-        let parent: PhotoPickerView
+        let parent: PhotoCaptureView
         
-        init(_ parent: PhotoPickerView) {
+        init(_ parent: PhotoCaptureView) {
             self.parent = parent
         }
         

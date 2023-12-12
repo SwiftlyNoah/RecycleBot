@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Sheet that handles the selection of one 
 struct ImagePickerView: UIViewControllerRepresentable {
     @Binding var selectedImage: UIImage?
 

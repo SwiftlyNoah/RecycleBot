@@ -13,8 +13,11 @@ class GPTService {
     
     private init() {}
 
-    private let apiKey = ""
-    private let url = URL(string: "https://api.openai.com/v1/chat/completions")!
+    // MARK: - Use your OpenAI API key here
+    struct Constants {
+        static let APIKey = ""
+        static let MaxTokens = 300
+    }
 
     enum OpenAIError: Error {
         case failedToDecode
@@ -68,13 +71,14 @@ class GPTService {
                     ]
                 ]
             ],
-            "max_tokens": 300
+            "max_tokens": Constants.MaxTokens
         ]
-
+        
+        let url = URL(string: "https://api.openai.com/v1/chat/completions")!
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.addValue("Bearer \(apiKey)", forHTTPHeaderField: "Authorization")
+        request.addValue("Bearer \(Constants.APIKey)", forHTTPHeaderField: "Authorization")
         request.httpBody = try? JSONSerialization.data(withJSONObject: payload, options: [])
 
         URLSession.shared.dataTask(with: request) { data, response, error in

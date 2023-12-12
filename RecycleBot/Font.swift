@@ -8,6 +8,7 @@
 import SwiftUI
 
 extension Font {
+    // Cool title font (only currently used in bold but other weights supported)
     static func aquire(weight: Font.Weight = .bold, size: CGFloat) -> Font {
         let weight: String = {
             switch weight {

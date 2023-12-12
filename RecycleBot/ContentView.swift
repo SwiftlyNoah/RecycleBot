@@ -16,6 +16,7 @@ struct ContentView: View {
     
     @State var response: GPTResponse?
     
+    // For calculating the cost of the app's usage
     @AppStorage("input_tokens") var inputTokens = 0
     @AppStorage("output_tokens") var outputTokens = 0
     @AppStorage("total_tokens") var totalTokens = 0
@@ -23,6 +24,7 @@ struct ContentView: View {
     
     @State var isShowingOptions = false
     
+    // user customizable parameters that are factored into the request
     @AppStorage("town") var town = ""
     @AppStorage("state") var state = ""
     @AppStorage("personality") var personality = ""
@@ -115,28 +117,30 @@ struct ContentView: View {
         }
         .padding([.horizontal, .top])
         .sheet(isPresented: $isShowingImagePicker) {
-            PhotoPickerView(selectedImage: $selectedImage)
+            PhotoCaptureView(selectedImage: $selectedImage)
         }
         .sheet(isPresented: $isShowingCamera) {
             ImagePickerView(selectedImage: $selectedImage)
         }
-        .onChange(of: selectedImage, initial: false) { _, newImage in
+        .onChange(of: selectedImage) { newImage in
             if let image = newImage {
                 callGPT4API(with: image)
             }
         }
-        .preferredColorScheme(.dark)
         .overlay(alignment: .bottomTrailing) {
             Button(action: { isViewingTokens.toggle() }) {
-                Text(isViewingTokens ? "\(totalTokens)" : costString())
-                    .font(.body.weight(.medium).monospaced())
-                    .foregroundStyle(.white)
-                    .padding(8)
-                    .background(Color.white.opacity(0.1))
-                    .clipShape(RoundedRectangle(cornerRadius: 20))
-                    .padding([.bottom, .trailing])
+                ZStack {
+                    Text(isViewingTokens ? "\(totalTokens)" : costString())
+                        .font(.body.weight(.medium).monospaced())
+                        .foregroundStyle(.white)
+                        .padding(8)
+                        .background(Color.white.opacity(0.1))
+                        .clipShape(RoundedRectangle(cornerRadius: 20))
+                        .padding([.bottom, .trailing])
+                }
             }
-        }
+        }   
+        .preferredColorScheme(.dark)
     }
     
     func getForegroundColor(for message: String?, defaultColor: Color = .primary) -> Color {
@@ -193,6 +197,7 @@ struct ContentView: View {
         }
     }
     
+    /// returns true if camera permission is granted, runs the access request if not determined, and returns false if permission denied
     func checkCameraPermission(completion: @escaping (Bool) -> Void) {
         switch AVCaptureDevice.authorizationStatus(for: .video) {
         case .authorized:

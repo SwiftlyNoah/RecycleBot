@@ -11,7 +11,7 @@
 		14173BBA2B27491E002A9EC6 /* AquireLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 14173BB72B27491E002A9EC6 /* AquireLight.otf */; };
 		14173BBB2B27491E002A9EC6 /* AquireBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 14173BB82B27491E002A9EC6 /* AquireBold.otf */; };
 		14173BBC2B27491E002A9EC6 /* AquireRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 14173BB92B27491E002A9EC6 /* AquireRegular.otf */; };
-		14173BBE2B275105002A9EC6 /* PhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14173BBD2B275105002A9EC6 /* PhotoPickerView.swift */; };
+		14173BBE2B275105002A9EC6 /* PhotoCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14173BBD2B275105002A9EC6 /* PhotoCaptureView.swift */; };
 		14173BC02B275124002A9EC6 /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14173BBF2B275124002A9EC6 /* ImagePickerView.swift */; };
 		14883DEA2B18C58A0027FF5A /* RecycleBotApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14883DE92B18C58A0027FF5A /* RecycleBotApp.swift */; };
 		14883DEC2B18C58A0027FF5A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14883DEB2B18C58A0027FF5A /* ContentView.swift */; };
@@ -25,7 +25,7 @@
 		14173BB72B27491E002A9EC6 /* AquireLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AquireLight.otf; sourceTree = "<group>"; };
 		14173BB82B27491E002A9EC6 /* AquireBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AquireBold.otf; sourceTree = "<group>"; };
 		14173BB92B27491E002A9EC6 /* AquireRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AquireRegular.otf; sourceTree = "<group>"; };
-		14173BBD2B275105002A9EC6 /* PhotoPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerView.swift; sourceTree = "<group>"; };
+		14173BBD2B275105002A9EC6 /* PhotoCaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCaptureView.swift; sourceTree = "<group>"; };
 		14173BBF2B275124002A9EC6 /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
 		14883DE62B18C58A0027FF5A /* RecycleBot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecycleBot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14883DE92B18C58A0027FF5A /* RecycleBotApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecycleBotApp.swift; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 			children = (
 				14173BB62B27491E002A9EC6 /* aquire-font */,
 				14173BB42B274856002A9EC6 /* Font.swift */,
-				14173BBD2B275105002A9EC6 /* PhotoPickerView.swift */,
+				14173BBD2B275105002A9EC6 /* PhotoCaptureView.swift */,
 				14173BBF2B275124002A9EC6 /* ImagePickerView.swift */,
 				14883DF82B18D4430027FF5A /* OpenAIService.swift */,
 				14883DEB2B18C58A0027FF5A /* ContentView.swift */,
@@ -174,7 +174,7 @@
 				14173BB52B274856002A9EC6 /* Font.swift in Sources */,
 				14883DEC2B18C58A0027FF5A /* ContentView.swift in Sources */,
 				14883DEA2B18C58A0027FF5A /* RecycleBotApp.swift in Sources */,
-				14173BBE2B275105002A9EC6 /* PhotoPickerView.swift in Sources */,
+				14173BBE2B275105002A9EC6 /* PhotoCaptureView.swift in Sources */,
 				14173BC02B275124002A9EC6 /* ImagePickerView.swift in Sources */,
 				14883DF92B18D4430027FF5A /* OpenAIService.swift in Sources */,
 			);
@@ -321,6 +321,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -353,6 +354,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
