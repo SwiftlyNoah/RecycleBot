@@ -7,18 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		14883DEA2B18C58A0027FF5A /* IsThatRecyclableApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14883DE92B18C58A0027FF5A /* IsThatRecyclableApp.swift */; };
+		14173BB52B274856002A9EC6 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14173BB42B274856002A9EC6 /* Font.swift */; };
+		14173BBA2B27491E002A9EC6 /* AquireLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 14173BB72B27491E002A9EC6 /* AquireLight.otf */; };
+		14173BBB2B27491E002A9EC6 /* AquireBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 14173BB82B27491E002A9EC6 /* AquireBold.otf */; };
+		14173BBC2B27491E002A9EC6 /* AquireRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 14173BB92B27491E002A9EC6 /* AquireRegular.otf */; };
+		14173BBE2B275105002A9EC6 /* PhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14173BBD2B275105002A9EC6 /* PhotoPickerView.swift */; };
+		14173BC02B275124002A9EC6 /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14173BBF2B275124002A9EC6 /* ImagePickerView.swift */; };
+		14883DEA2B18C58A0027FF5A /* RecycleBotApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14883DE92B18C58A0027FF5A /* RecycleBotApp.swift */; };
 		14883DEC2B18C58A0027FF5A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14883DEB2B18C58A0027FF5A /* ContentView.swift */; };
 		14883DEE2B18C58B0027FF5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14883DED2B18C58B0027FF5A /* Assets.xcassets */; };
 		14883DF12B18C58B0027FF5A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14883DF02B18C58B0027FF5A /* Preview Assets.xcassets */; };
+		14883DF92B18D4430027FF5A /* OpenAIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14883DF82B18D4430027FF5A /* OpenAIService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		14883DE62B18C58A0027FF5A /* IsThatRecyclable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IsThatRecyclable.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		14883DE92B18C58A0027FF5A /* IsThatRecyclableApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsThatRecyclableApp.swift; sourceTree = "<group>"; };
+		14173BB42B274856002A9EC6 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		14173BB72B27491E002A9EC6 /* AquireLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AquireLight.otf; sourceTree = "<group>"; };
+		14173BB82B27491E002A9EC6 /* AquireBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AquireBold.otf; sourceTree = "<group>"; };
+		14173BB92B27491E002A9EC6 /* AquireRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AquireRegular.otf; sourceTree = "<group>"; };
+		14173BBD2B275105002A9EC6 /* PhotoPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerView.swift; sourceTree = "<group>"; };
+		14173BBF2B275124002A9EC6 /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
+		14883DE62B18C58A0027FF5A /* RecycleBot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecycleBot.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		14883DE92B18C58A0027FF5A /* RecycleBotApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecycleBotApp.swift; sourceTree = "<group>"; };
 		14883DEB2B18C58A0027FF5A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		14883DED2B18C58B0027FF5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14883DF02B18C58B0027FF5A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		14883DF72B18CE280027FF5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		14883DF82B18D4430027FF5A /* OpenAIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,10 +47,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		14173BB62B27491E002A9EC6 /* aquire-font */ = {
+			isa = PBXGroup;
+			children = (
+				14173BB72B27491E002A9EC6 /* AquireLight.otf */,
+				14173BB82B27491E002A9EC6 /* AquireBold.otf */,
+				14173BB92B27491E002A9EC6 /* AquireRegular.otf */,
+			);
+			path = "aquire-font";
+			sourceTree = "<group>";
+		};
 		14883DDD2B18C58A0027FF5A = {
 			isa = PBXGroup;
 			children = (
-				14883DE82B18C58A0027FF5A /* IsThatRecyclable */,
+				14883DE82B18C58A0027FF5A /* RecycleBot */,
 				14883DE72B18C58A0027FF5A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,20 +68,26 @@
 		14883DE72B18C58A0027FF5A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				14883DE62B18C58A0027FF5A /* IsThatRecyclable.app */,
+				14883DE62B18C58A0027FF5A /* RecycleBot.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		14883DE82B18C58A0027FF5A /* IsThatRecyclable */ = {
+		14883DE82B18C58A0027FF5A /* RecycleBot */ = {
 			isa = PBXGroup;
 			children = (
-				14883DE92B18C58A0027FF5A /* IsThatRecyclableApp.swift */,
+				14173BB62B27491E002A9EC6 /* aquire-font */,
+				14173BB42B274856002A9EC6 /* Font.swift */,
+				14173BBD2B275105002A9EC6 /* PhotoPickerView.swift */,
+				14173BBF2B275124002A9EC6 /* ImagePickerView.swift */,
+				14883DF82B18D4430027FF5A /* OpenAIService.swift */,
 				14883DEB2B18C58A0027FF5A /* ContentView.swift */,
+				14883DE92B18C58A0027FF5A /* RecycleBotApp.swift */,
 				14883DED2B18C58B0027FF5A /* Assets.xcassets */,
+				14883DF72B18CE280027FF5A /* Info.plist */,
 				14883DEF2B18C58B0027FF5A /* Preview Content */,
 			);
-			path = IsThatRecyclable;
+			path = RecycleBot;
 			sourceTree = "<group>";
 		};
 		14883DEF2B18C58B0027FF5A /* Preview Content */ = {
@@ -70,9 +101,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		14883DE52B18C58A0027FF5A /* IsThatRecyclable */ = {
+		14883DE52B18C58A0027FF5A /* RecycleBot */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 14883DF42B18C58B0027FF5A /* Build configuration list for PBXNativeTarget "IsThatRecyclable" */;
+			buildConfigurationList = 14883DF42B18C58B0027FF5A /* Build configuration list for PBXNativeTarget "RecycleBot" */;
 			buildPhases = (
 				14883DE22B18C58A0027FF5A /* Sources */,
 				14883DE32B18C58A0027FF5A /* Frameworks */,
@@ -82,9 +113,9 @@
 			);
 			dependencies = (
 			);
-			name = IsThatRecyclable;
+			name = RecycleBot;
 			productName = IsThatRecyclable;
-			productReference = 14883DE62B18C58A0027FF5A /* IsThatRecyclable.app */;
+			productReference = 14883DE62B18C58A0027FF5A /* RecycleBot.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +133,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 14883DE12B18C58A0027FF5A /* Build configuration list for PBXProject "IsThatRecyclable" */;
+			buildConfigurationList = 14883DE12B18C58A0027FF5A /* Build configuration list for PBXProject "RecycleBot" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,7 +146,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				14883DE52B18C58A0027FF5A /* IsThatRecyclable */,
+				14883DE52B18C58A0027FF5A /* RecycleBot */,
 			);
 		};
 /* End PBXProject section */
@@ -126,7 +157,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				14883DF12B18C58B0027FF5A /* Preview Assets.xcassets in Resources */,
+				14173BBB2B27491E002A9EC6 /* AquireBold.otf in Resources */,
 				14883DEE2B18C58B0027FF5A /* Assets.xcassets in Resources */,
+				14173BBA2B27491E002A9EC6 /* AquireLight.otf in Resources */,
+				14173BBC2B27491E002A9EC6 /* AquireRegular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +171,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14173BB52B274856002A9EC6 /* Font.swift in Sources */,
 				14883DEC2B18C58A0027FF5A /* ContentView.swift in Sources */,
-				14883DEA2B18C58A0027FF5A /* IsThatRecyclableApp.swift in Sources */,
+				14883DEA2B18C58A0027FF5A /* RecycleBotApp.swift in Sources */,
+				14173BBE2B275105002A9EC6 /* PhotoPickerView.swift in Sources */,
+				14173BC02B275124002A9EC6 /* ImagePickerView.swift in Sources */,
+				14883DF92B18D4430027FF5A /* OpenAIService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,10 +309,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"IsThatRecyclable/Preview Content\"";
-				DEVELOPMENT_TEAM = 859DBKXQPY;
+				DEVELOPMENT_ASSET_PATHS = "\"RecycleBot/Preview Content\"";
+				DEVELOPMENT_TEAM = RGM9JAFXFM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RecycleBot/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "gimme access";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "gimme access";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -285,7 +326,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.NoahBrauner.IsThatRecyclable;
+				PRODUCT_BUNDLE_IDENTIFIER = com.NoahBrauner.RecycleBot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -300,10 +341,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"IsThatRecyclable/Preview Content\"";
-				DEVELOPMENT_TEAM = 859DBKXQPY;
+				DEVELOPMENT_ASSET_PATHS = "\"RecycleBot/Preview Content\"";
+				DEVELOPMENT_TEAM = RGM9JAFXFM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RecycleBot/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "gimme access";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "gimme access";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -314,7 +358,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.NoahBrauner.IsThatRecyclable;
+				PRODUCT_BUNDLE_IDENTIFIER = com.NoahBrauner.RecycleBot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -325,7 +369,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		14883DE12B18C58A0027FF5A /* Build configuration list for PBXProject "IsThatRecyclable" */ = {
+		14883DE12B18C58A0027FF5A /* Build configuration list for PBXProject "RecycleBot" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				14883DF22B18C58B0027FF5A /* Debug */,
@@ -334,7 +378,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		14883DF42B18C58B0027FF5A /* Build configuration list for PBXNativeTarget "IsThatRecyclable" */ = {
+		14883DF42B18C58B0027FF5A /* Build configuration list for PBXNativeTarget "RecycleBot" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				14883DF52B18C58B0027FF5A /* Debug */,
