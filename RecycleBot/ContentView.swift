@@ -192,7 +192,7 @@ struct ContentView: View {
                 self.outputTokens += response.usage.completionTokens
                 self.totalTokens += response.usage.totalTokens
             case .failure(let error):
-                print(error)
+                print("Error in API call: ", error)
             }
         }
     }

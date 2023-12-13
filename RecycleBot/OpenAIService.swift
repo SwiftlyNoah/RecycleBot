@@ -15,15 +15,20 @@ class GPTService {
 
     // MARK: - Use your OpenAI API key here
     struct Constants {
-        static let APIKey = ""
+        static let APIKey = Bundle.main.infoDictionary?["API_KEY"] as? String
         static let MaxTokens = 300
     }
 
     enum OpenAIError: Error {
         case failedToDecode
+        case noAPIKeyFound
     }
     
     func callAPI(with image: UIImage, town: String, state: String, personality: String, completion: @escaping (Result<GPTResponse, Error>) -> Void) {
+        guard let apiKey = Constants.APIKey, apiKey != "YOUR_API_KEY_HERE" else {
+            completion(.failure(OpenAIError.noAPIKeyFound))
+            return
+        }
         guard let imageData = image.jpegData(compressionQuality: 0.8) else {
             completion(.failure(NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "Unable to get image data"])))
             return
@@ -78,7 +83,7 @@ class GPTService {
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.addValue("Bearer \(Constants.APIKey)", forHTTPHeaderField: "Authorization")
+        request.addValue("Bearer \(apiKey)", forHTTPHeaderField: "Authorization")
         request.httpBody = try? JSONSerialization.data(withJSONObject: payload, options: [])
 
         URLSession.shared.dataTask(with: request) { data, response, error in
@@ -94,7 +99,6 @@ class GPTService {
             catch {
                 completion(.failure(OpenAIError.failedToDecode))
             }
-
         }.resume()
     }
 }

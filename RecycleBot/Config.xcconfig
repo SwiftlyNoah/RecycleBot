@@ -1,0 +1,10 @@
+//
+//  Config.xcconfig
+//  RecycleBot
+//
+//  Created by Noah Brauner on 12/12/23.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+API_KEY = YOUR_API_KEY_HERE
