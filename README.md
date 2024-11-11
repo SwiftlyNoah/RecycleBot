@@ -1,4 +1,10 @@
+<img src="https://github.com/user-attachments/assets/793e6ed3-9cf4-4bd2-881c-9cbd1fb5d94d" alt="App Icon" width="80" height="80">
+
 # RecycleBot
+
+[Watch the Demo](https://studio.youtube.com/video/GPy1Fqy3rkc/edit)
+
+[Read the write-up](https://docs.google.com/document/d/1rjaJKNxIaVSYs-_fNJzyy7vzKrRo9HudbfI2gPxMyes/edit?usp=sharing)
 
 ## Prerequisites
 1. An OpenAI API key
